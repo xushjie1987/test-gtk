@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build-gtk",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"main.c",
+				"-o",
+				"test-hello",
+				"`pkg-config",
+				"--cflags",
+				"--libs",
+				"gtk+-3.0`"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: /usr/bin/gcc"
+		}
+	]
+}
